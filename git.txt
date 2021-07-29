@@ -1,0 +1,19 @@
+enter project folder
+
+start a repository
+
+git init
+
+git add . //Makes everything ready for commit
+
+git commit -m "These are notes" //Takes snapshot of all files.
+
+git log //View commits
+
+git log --author="Bucky" //See what programmer made commits
+
+git status // sees what has been added.
+
+git remote add origin url //Tells git the address to push to
+
+git push -u origin master //Push the shit.
