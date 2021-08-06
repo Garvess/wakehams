@@ -1,5 +1,5 @@
 //Connection database
-
+//To compile: g++ main.cpp -o output -L/usr/include/mariadb/mysql -lmysqlclient
 
 #include<iostream>
 #include<mysql/mysql.h>
@@ -73,6 +73,8 @@ void RegisterStudent()
         string insert_query1 = "INSERT INTO clients (first_name) VALUES ('"+ first_name +"')";
 
         const char* q = insert_query1.c_str();
+
+//Idea: Create another "insert_query string". Declare another char pointer "insert_query2 etc".
 
         qstate = mysql_query(conn,q);
 

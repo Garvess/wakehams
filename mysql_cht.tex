@@ -1,0 +1,65 @@
+\documentclass{article}
+
+\author{Gary Edwards}
+\title{Gary's MySQL Cheat Sheet}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\section{Open Database}
+
+\verb|USE "database name";|
+
+\section{Show Tables}
+
+\verb|SHOW TABLES;|
+
+\section{Show tables and the table type}
+
+\verb|SHOW FULL TABLES;|
+
+\section{Create database}
+
+\verb|CREATE DATABASE "database name";|
+
+\section{Create table}
+
+\verb|CREATE TABLE "books"|\\
+
+\verb|For example:|\\
+\verb|CREATE TABLE books(|\\
+\verb|ISBN CHAR(20) PRIMARY KEY,|\\
+\verb|title VARCHAR(50),|\\
+\verb|authorID INT,|\\
+\verb|desc TEXT);|
+
+\section{View table}
+\verb|DESCRIBE ''Books'';|
+
+\section{Auto increment primary key}
+\verb|(author_id INT AUTO_INCREMENT PRIMARY KEY;)|
+
+\section{Enter data}
+\verb|INSERT INTO books|
+\verb|(title, author_id, isbn, year_pub)|\\
+
+\verb|VALUES (''Castle'', '1','5028','1988');|
+
+\newpage
+
+\section{Retrieve limited number of data points.}
+\verb|SELECT title, name_last|\\
+\verb|FROM books|\\
+\verb|LIMIT 5;|
+
+\section{Join table}
+\verb|SELECT title,name_last|\\
+\verb|FROM books|\\
+\verb|JOIN authors USING(author_id);|
+
+\end{document}
+
+
